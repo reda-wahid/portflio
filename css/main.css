@@ -1,0 +1,692 @@
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+body{
+    background-color: rgb(0, 0, 0);
+    color: white;
+   text-transform: capitalize;
+}
+:root{
+    --main-color: rgb(62, 98, 104);
+}
+.nav{
+    position: absolute;
+    right: 5%;
+    top: 2%;
+    z-index: 3;
+    display: none !important;
+}
+span{
+    color: var(--main-color);
+}
+.st::before{
+    content: "";
+    position: absolute;
+    top: 50px;
+    left: 5px;
+    width: 60px;
+    height: 5px;
+    background-color: var(--main-color);
+ }
+.st::after{
+  content: "";
+  position: absolute;
+  top: 60px;
+  left: 5px;
+  width: 30px;
+   height: 5px;
+ background-color: var(--main-color);
+ }
+
+
+
+svg{
+    width: 20px;
+    color: white !important;
+    margin-right: 10px;
+   fill: var(--main-color);
+}
+aside{
+    width: 280px;
+    height: 100vh;
+    background-color: rgb(29, 28, 28);
+  position: fixed;
+  z-index: 2;
+}
+aside ul{
+    transform: translateY(70%);
+    padding-left: 0;
+}
+aside ul li{
+    list-style: none;
+    margin-bottom: 30px;
+    padding: 10px;
+    box-shadow: 0px 2px 5px 5px var(--main-color);
+}
+aside ul li a{
+    color: white;
+    text-decoration: none;
+}
+aside ul li a:hover{
+color: var(--main-color);
+}
+.logo{
+    transform: translate(35%,190%);
+    font-size: 40px;
+}
+
+.logo::before{
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: -15px;
+    width: 30px;
+    height: 30px;
+    border-left: 5px solid var(--main-color);
+    border-bottom: 5px solid var(--main-color);
+   
+}
+.logo::after{
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 75px;
+    width: 30px;
+    height: 30px;
+    border-right: 5px solid var(--main-color);
+    border-top: 5px solid var(--main-color);
+   
+}
+
+
+/*home padge*/
+.content{
+position: absolute;
+left: 22%;
+width: 77%;
+}
+.home{
+   min-height: 100vh;
+    display: flex;
+   
+    flex-wrap: wrap-reverse !important;
+    justify-content: flex-center !important;
+    gap: 30px;
+    align-content: center;
+}
+
+.home img{
+    width: 400px;
+    height: 500px;
+    opacity: .4;
+    transition: .5s;
+
+}
+.home img:hover{
+ opacity: .7;
+   
+}
+
+
+.name{  
+    margin-top: 80px;
+    width: 600px;
+}
+.name h1 {
+    margin-bottom: 30px;
+}
+.name h2 {
+    margin-bottom: 30px;
+    position: relative;
+}
+.name p{
+   font-size: 20px;
+   margin-bottom: 80px;
+}
+.name button{
+    background-color: var(--main-color);
+}
+
+.my{
+    height: 30px;
+}
+.home ul{
+    height: 50px;
+    overflow: hidden;
+    position: absolute;
+    left: 60px;
+    top: -8px;
+}
+.home ul li{
+    list-style: none;
+    line-height: 50px;
+    position: relative;
+    top: 0px;
+    animation: slide 6s steps(3) infinite;
+}
+@keyframes slide{
+    100%{
+      top: -150px;
+    }
+}
+.home ul li span{
+position: relative;
+}
+.home ul li span::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 300px;
+    height: 60px;
+    background-color: black;
+    border-left: 2px solid red;
+    animation: typing 3s steps(20) infinite;
+}
+@keyframes typing{
+    100%{
+        left: 120%;
+    }
+}
+
+
+/*page about me*/
+.about{
+    transform: translateY(10%);
+    color: white;
+   width: 97%;
+
+    margin-bottom: 80px !important;
+}
+
+.about h1{
+    margin-bottom: 40px
+}
+.data-me span{
+    color: rgb(143, 143, 143);
+}
+.progress{
+    height: 8px ;
+}
+.progress-in{
+    transform: scaleX(0);
+    animation:animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+    transform-origin: left;
+}
+@keyframes animate {
+    100%{
+        transform: scaleX(1);
+    }
+}
+.skills{
+    position: relative;
+}
+.skill-percent{
+    color: white;
+    position: absolute;
+margin-top: -25px;
+    right: 6%;
+    
+    font-size: 20px;
+}
+.my-data button{
+    background-color: var(--main-color);
+    height: 60px ;
+    margin-right: 10px;
+   padding: 0px 50px; 
+    border-radius: 50px;
+    color: white;
+}
+
+
+
+.education{
+   
+ padding: 40px;
+    padding-left: 80px;
+    padding-bottom: 80px !important;
+    background-color: rgb(29, 28, 28);
+    margin-right: 30px;
+    border-radius: 10px;
+    margin-bottom: 80px !important;
+
+}
+.education::before{
+content: "";
+position: absolute;
+left: 35px;
+width: 2px;
+
+background-color: red;
+}
+.con{
+    margin-bottom: 30px;
+    position: relative;
+}
+.con:last-child{
+    margin-bottom: -50px;
+}
+.con span{
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    left: -55px;
+}
+.education h3
+,.experience h3{
+    margin-bottom: 10px;
+}
+.education p,
+.experience p{
+    font-size: 13px;
+color: rgb(134, 134, 134);
+}
+.experience{
+    width: 80%;
+    padding: 40px;
+    padding-left: 80px;
+    background-color: rgb(29, 28, 28);
+    border-radius: 10px;
+    position: relative;
+}
+.experience::before{
+    content: "";
+    position: absolute;
+    left: 35px;
+    width: 2px;
+    height: 70vh;
+    background-color: red;
+}
+
+/*servecies*/
+.serves{ 
+    color: white;
+   width: 100%;
+    position: relative;
+}
+.serves h1{
+    margin-left: 5px;
+}
+.serv{
+    margin-top: 50px !important;
+margin: auto;
+}
+.serv .my-serv{
+    background-color: rgb(29, 28, 28);
+
+    padding: 30px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 1px 15px 1px whitesmoke;
+    opacity: .4;
+}
+.serv .my-serv:hover{
+    box-shadow: 0 1px 1px 8px whitesmoke;
+    opacity: 1;
+}
+.serv svg{
+    width: 30px;
+}
+
+/*portflio page*/
+.portflioo{   
+    margin-bottom: 40px;
+    width: 100%;
+    position: relative;
+}
+
+.portflioo h2{
+    margin: 0 !important;
+}
+.portflioo h1{
+    margin-bottom: 30px;
+}
+.my-port .port{
+opacity: .7;
+background-color: rgb(22, 22, 22);
+
+position: relative;
+}
+.port a svg{
+    width: 60px;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    opacity: 0;
+}
+ .port:hover svg{
+    opacity: 1;
+}
+.my-port .port:hover{
+    opacity: 1;
+}
+.my-port .port img{
+margin: 0;
+width: 250px;
+height: 250px;
+cursor: pointer;
+border-radius: 5px;
+}
+
+/* width */
+::-webkit-scrollbar{
+    width: 20px;
+    height: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(73, 73, 73); 
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(83, 83, 83); 
+  }
+
+
+/*my-contact*/
+.my-contact{
+    position: relative;
+}
+.my-contact .data{
+    gap: 40px
+}
+.contact{
+text-align: center;
+}
+.my-contact span{
+    color: #ddd;
+}
+.contact p{
+    margin-bottom: 60px;
+}
+.my-contact .send-me{
+    text-align: center;
+  margin-top: 80px;
+}
+.inp input{
+    outline: none;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+
+.inp textarea{
+  height: 100px;
+  overflow: hidden;
+  resize: none;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+}
+.inp input:last-child{
+background-color: var(--main-color);
+padding: 10px 30px;
+border-radius: 20px;
+color: white;
+}
+
+
+/*responsive */
+@media(min-width: 100px) and (max-width: 1100px){
+
+  aside{
+    display: none;
+  }
+  .nav{
+    display: block !important;
+  }
+  .content{
+    width: 100% !important;
+    margin: auto !important;
+    left: 0 !important;
+    position: relative !important;
+  }
+  }
+ @media(max-width: 767px){
+    .home ul{
+        height: 50px;
+        overflow: hidden;
+        position: absolute;
+        left: 45px;
+        top: -13px;
+ }
+ .home{
+width: 100%;
+  padding: 10px;
+   }
+  .home .btn{
+      transform: translateY(-7vh) !important;
+  }
+  .name{
+      width: 100% !important;
+      transform: translateY(15vh) !important;
+  }
+
+
+
+  /*about*/
+.about{
+    margin-bottom: 120px !important;
+}
+  .about h3{
+    margin: 20px 0 !important;
+
+  .data-me{
+      display: block;
+  }
+  .my-data{
+      display: block;
+  }
+  .skils{
+      width: 100%;
+  }
+  
+  .studing{
+      width: 100%;
+      margin: auto !important ;
+      margin: 30px 0 !important;
+  }
+
+  .education .con span{ 
+left: -66px;
+  }
+
+  
+  /*serves*/
+  .serves{
+      padding: 0!important;
+    position: relative !important;
+    
+  }
+.serv{
+
+    position: relative !important;
+}
+  .my-serv{
+      margin-left: 0px !important;
+      margin-bottom: 50px!important;
+      
+  }
+
+  
+  
+  .portflioo{
+      width: 100%;
+      margin-bottom: 250px;
+      padding: 0 !important;
+      position: relative !important;
+  }
+  .sc{
+    padding: 0 !important; 
+  }
+  .port{
+    margin: 30px 0 !important;
+    padding: 0 !important; 
+  }
+ 
+  .my-port{
+      width: 90% !important;  
+      margin: auto; 
+      position: relative !important;
+  }
+
+ 
+
+  .port a svg{
+    top: 45%;
+    left: 40%;
+}
+  
+
+.my-contact{
+    position: relative !important;
+  }
+  .my-contact h1{
+margin-bottom: 50px ;
+  }
+  .send-me{
+      margin-top: 50px;
+  }
+  .send-me input{
+      width: 100% !important;
+margin: auto;
+  }
+textarea{
+    margin: auto;
+}
+  .my-contact .st::before{
+      top: -120px;   
+  }
+  .my-contact .st::after{
+      top: -110px;  
+  }
+  
+  .inp{
+    padding: 10px;
+  }
+  .inp input,textarea{
+    width: 100% !important;
+  
+}
+  }
+
+  
+  
+  
+  @media(min-width: 768px) and (max-width: 992px){
+    .content{
+        width: 100% !important;
+        margin: auto !important;
+        left: 0 !important;
+      }
+
+    /*home*/  
+
+
+  .home ul{
+    height: 50px;
+    overflow: hidden;
+}
+  .home{
+    margin-bottom: 20px;
+  }
+ 
+  .skills .skill-item{
+      width: 100% !important;
+  }
+
+ 
+  .about h3{
+    margin: 30px 0 !important;
+  }
+
+      .studing{
+          width: 100%;
+        margin: auto;
+      }
+      .education{
+          width: 100%;
+         
+      }
+      .experience{
+          width: 100%;
+          margin-left: 80px;
+      }
+      .date-study h2{
+          padding-left: 120px;
+      }
+    
+   
+    
+   
+ .serves h1{
+    margin-bottom: 120px;
+ }
+ 
+
+
+  .port a svg{
+    top: 45%;
+    left: 45%;
+}
+
+      .inp input:first-child{
+          width: 100% !important;
+      }
+    
+     
+  }
+  
+@media(min-width: 992px) and (max-width: 1200px){
+
+.home{
+    height: 100vh;
+    background-color: red;
+}
+.nav{
+    display: block;
+ }
+
+ }
+ @media (min-width: 1201px) and (max-width: 1500px){
+    
+
+.nav{
+    display: none !important;
+}
+ }   
+  @media(min-width: 993px) and (max-width: 1200px){
+      aside{
+          display: none;     
+    }
+  .content{
+    width: 100%;
+          position: relative;
+          left: 0% !important;
+   }
+   
+  .about p,h1{
+    margin-bottom: 40px;
+    margin-top: 40px
+  }
+
+  .send-me .inp input:first-child{
+    width: 100% !important;
+  }
+  }
+
+ 
