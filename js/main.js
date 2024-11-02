@@ -24,3 +24,20 @@ link[i].addEventListener("click",()=>{
 });
 }
 
+let submit = document.querySelector(".sub");
+
+function Emailsend() {
+    let params = {
+        name: document.querySelector(".name").value,
+        email: document.querySelector(".email").value,
+        description: document.querySelector(".description").value,
+        suject: document.querySelector(".suject").value,
+    
+    }
+    
+    emailjs.send("service_aaah5d7","template_bg5rmvi",params).then(alert("email sent"));  
+}
+
+submit.addEventListener("click", () => {
+Emailsend()
+});
